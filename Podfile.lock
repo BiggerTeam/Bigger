@@ -1,0 +1,15 @@
+PODS:
+  - HHAlertView (0.1.0)
+  - LiquidLoader (0.1.1)
+
+DEPENDENCIES:
+  - HHAlertView
+  - LiquidLoader
+
+SPEC CHECKSUMS:
+  HHAlertView: 043766460ca18236a1e2fbbbdb396318d304d43d
+  LiquidLoader: cf49954a6643f610c06a7db45da2da81a68a154b
+
+PODFILE CHECKSUM: d4e17b061e08bd828b03136ed74973c29f7ab904
+
+COCOAPODS: 1.0.0
