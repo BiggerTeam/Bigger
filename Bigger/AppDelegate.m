@@ -2,8 +2,13 @@
 //  AppDelegate.m
 //  Bigger
 //
+<<<<<<< HEAD
 //  Created by Departures on 5/8/16.
 //  Copyright © 2016 Departures. All rights reserved.
+=======
+//  Created by Huang on 16/5/1.
+//  Copyright © 2016年 Huang. All rights reserved.
+>>>>>>> master
 //
 
 #import "AppDelegate.h"
@@ -16,6 +21,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+<<<<<<< HEAD
+=======
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:appKey
+             withSecret:appSecret];
+>>>>>>> master
     // Override point for customization after application launch.
     return YES;
 }
