@@ -13,7 +13,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *phonenumberTextField;
-@property (weak, nonatomic) IBOutlet UILabel *remindmessageLable; //提醒用户验证吗已发送至xxx-xxxx-xxxx
+@property (weak, nonatomic) IBOutlet UILabel *remindmessageLabel; //提醒用户验证吗已发送至xxx-xxxx-xxxx
 @property (weak, nonatomic) IBOutlet UIButton *messagesendButton;
 @property (weak, nonatomic) IBOutlet UITextField *identifycodeTextField;
 

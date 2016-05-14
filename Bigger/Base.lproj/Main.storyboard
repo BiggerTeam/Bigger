@@ -184,7 +184,7 @@
                         <outlet property="identifycodeTextField" destination="fo5-hR-H1B" id="kED-ro-7EK"/>
                         <outlet property="messagesendButton" destination="weg-n4-BDY" id="EAo-Aw-MAg"/>
                         <outlet property="phonenumberTextField" destination="dnF-Va-CJR" id="qif-gW-bkC"/>
-                        <outlet property="remindmessageLable" destination="xyv-Ii-HYY" id="pGg-w7-soI"/>
+                        <outlet property="remindmessageLabel" destination="xyv-Ii-HYY" id="4MJ-JY-xyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44C-aV-OxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dJd-1R-dhl"/>
+        <segue reference="J9i-jq-hrx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,7 @@
 
 @implementation RegisterViewController
 
-@synthesize phonenumberTextField,remindmessageLable,messagesendButton,identifycodeTextField;
+@synthesize phonenumberTextField,remindmessageLabel,messagesendButton,identifycodeTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
