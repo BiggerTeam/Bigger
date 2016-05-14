@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		630C75ED1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EC1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.m */; };
+		630C75F01CE6BB1A005566F8 /* MainLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLogin.m */; };
 		630F9C521CE24D0300CD928F /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterController.m */; };
 		630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */; };
 		630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA4701CE4CDAF0020A41D /* SMS_SDK.framework */; };
@@ -23,7 +23,6 @@
 		6331C8B51CD6207300F1C54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6331C8B31CD6207300F1C54B /* LaunchScreen.storyboard */; };
 		6331C8C01CD6207300F1C54B /* BiggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8BF1CD6207300F1C54B /* BiggerTests.m */; };
 		6331C8CB1CD6207300F1C54B /* BiggerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8CA1CD6207300F1C54B /* BiggerUITests.m */; };
-		6347AEC41CDF25100049BF5F /* MainLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347AEC21CDF25100049BF5F /* MainLogin.m */; };
 		6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347AEC91CDF459E0049BF5F /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		630C75EB1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessControllerViewController.h; sourceTree = "<group>"; };
-		630C75EC1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSuccessControllerViewController.m; sourceTree = "<group>"; };
+		630C75EE1CE6BB1A005566F8 /* MainLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLogin.h; sourceTree = "<group>"; };
+		630C75EF1CE6BB1A005566F8 /* MainLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLogin.m; sourceTree = "<group>"; };
 		630F9C501CE24D0300CD928F /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
 		630F9C511CE24D0300CD928F /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
 		630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -70,8 +69,6 @@
 		6331C8C61CD6207300F1C54B /* BiggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6331C8CA1CD6207300F1C54B /* BiggerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiggerUITests.m; sourceTree = "<group>"; };
 		6331C8CC1CD6207300F1C54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6347AEC11CDF25100049BF5F /* MainLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLogin.h; path = ../MainLogin.h; sourceTree = "<group>"; };
-		6347AEC21CDF25100049BF5F /* MainLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainLogin.m; path = ../MainLogin.m; sourceTree = "<group>"; };
 		6347AEC81CDF459E0049BF5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6347AEC91CDF459E0049BF5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,12 +211,10 @@
 		6347AEC61CDF25360049BF5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6347AEC11CDF25100049BF5F /* MainLogin.h */,
-				6347AEC21CDF25100049BF5F /* MainLogin.m */,
+				630C75EE1CE6BB1A005566F8 /* MainLogin.h */,
+				630C75EF1CE6BB1A005566F8 /* MainLogin.m */,
 				630F9C501CE24D0300CD928F /* RegisterController.h */,
 				630F9C511CE24D0300CD928F /* RegisterController.m */,
-				630C75EB1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.h */,
-				630C75EC1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -362,9 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6331C8A71CD6207300F1C54B /* main.m in Sources */,
-				630C75ED1CE5F4A1005566F8 /* RegisterSuccessControllerViewController.m in Sources */,
+				630C75F01CE6BB1A005566F8 /* MainLogin.m in Sources */,
 				630FA4811CE574F50020A41D /* BiggerServerAPITools.m in Sources */,
-				6347AEC41CDF25100049BF5F /* MainLogin.m in Sources */,
 				630F9C521CE24D0300CD928F /* RegisterController.m in Sources */,
 				6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */,
 			);
