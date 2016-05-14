@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Canvas (0.1.2)
+  - SOCKit (1.1)
+  - TPKeyboardAvoiding (1.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Canvas
+  - SOCKit
+  - TPKeyboardAvoiding
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  SOCKit: c7376ac262bea9115b8f749358f762522a47d392
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
+
+PODFILE CHECKSUM: a4573e80d3cdfb31a42610fcb91f0d23b7db64eb
+
+COCOAPODS: 1.0.0

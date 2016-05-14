@@ -49,4 +49,10 @@
 
 - (IBAction)browseButtonDidPress:(id)sender {
 }
+
+//登录失败的弹窗
+-(void)doErrorMessage{
+    [HHAlertView showAlertWithStyle:HHAlertStyleError inView:self.view Title:@"登录失败" detail:@"账户或密码错误" cancelButton:nil Okbutton:@"我知道了"];
+}
+
 @end

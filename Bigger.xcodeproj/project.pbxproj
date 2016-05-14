@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430364161CE71C5A008B2385 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 430364151CE71C5A008B2385 /* HHAlertView.m */; };
 		630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */; };
 		630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */; };
 		630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterViewController.m */; };
@@ -25,6 +26,7 @@
 		6331C8C01CD6207300F1C54B /* BiggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8BF1CD6207300F1C54B /* BiggerTests.m */; };
 		6331C8CB1CD6207300F1C54B /* BiggerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8CA1CD6207300F1C54B /* BiggerUITests.m */; };
 		6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347AEC91CDF459E0049BF5F /* AppDelegate.m */; };
+		FE0E47A5A1E8CB21D321174C /* libPods-Bigger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A776AA8BB34C1F35A5540B1D /* libPods-Bigger.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C7EA8CBE649F659E7CF7CC /* Pods-Bigger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bigger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bigger/Pods-Bigger.release.xcconfig"; sourceTree = "<group>"; };
+		430364141CE71C5A008B2385 /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
+		430364151CE71C5A008B2385 /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
 		630C75EE1CE6BB1A005566F8 /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
 		630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
@@ -74,6 +79,8 @@
 		6331C8CC1CD6207300F1C54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6347AEC81CDF459E0049BF5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6347AEC91CDF459E0049BF5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A776AA8BB34C1F35A5540B1D /* libPods-Bigger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bigger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6D70E34D47EE2E1BA259AF /* Pods-Bigger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bigger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bigger/Pods-Bigger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 				630FA47C1CE4CED40020A41D /* MessageUI.framework in Frameworks */,
 				630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */,
 				630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */,
+				FE0E47A5A1E8CB21D321174C /* libPods-Bigger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +116,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3039432DA28FC57DFC25AA57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A776AA8BB34C1F35A5540B1D /* libPods-Bigger.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		430364131CE71C3A008B2385 /* HHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				430364141CE71C5A008B2385 /* HHAlertView.h */,
+				430364151CE71C5A008B2385 /* HHAlertView.m */,
+			);
+			name = HHAlertView;
+			sourceTree = "<group>";
+		};
 		630FA46E1CE4CDAF0020A41D /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +145,7 @@
 		630FA47E1CE4CFAE0020A41D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				430364131CE71C3A008B2385 /* HHAlertView */,
 				630FA46E1CE4CDAF0020A41D /* SMS_SDK */,
 				630FA4731CE4CED40020A41D /* JavaScriptCore.framework */,
 				630FA4741CE4CED40020A41D /* libicucore.tbd */,
@@ -137,6 +163,8 @@
 				6331C8BE1CD6207300F1C54B /* BiggerTests */,
 				6331C8C91CD6207300F1C54B /* BiggerUITests */,
 				6331C8A31CD6207300F1C54B /* Products */,
+				977A85F10454695BEB4D3B15 /* Pods */,
+				3039432DA28FC57DFC25AA57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +259,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		977A85F10454695BEB4D3B15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D70E34D47EE2E1BA259AF /* Pods-Bigger.debug.xcconfig */,
+				01C7EA8CBE649F659E7CF7CC /* Pods-Bigger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6331C8CF1CD6207300F1C54B /* Build configuration list for PBXNativeTarget "Bigger" */;
 			buildPhases = (
+				81E610B44C4BA0F8F2F4FE82 /* 📦 Check Pods Manifest.lock */,
 				6331C89E1CD6207300F1C54B /* Sources */,
 				6331C89F1CD6207300F1C54B /* Frameworks */,
 				6331C8A01CD6207300F1C54B /* Resources */,
+				A7E7BF4B2573E50FE4E40C47 /* 📦 Embed Pods Frameworks */,
+				07F8D524530248892C52DF2F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +396,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07F8D524530248892C52DF2F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bigger/Pods-Bigger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81E610B44C4BA0F8F2F4FE82 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7E7BF4B2573E50FE4E40C47 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bigger/Pods-Bigger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6331C89E1CD6207300F1C54B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -367,6 +455,7 @@
 				630FA4811CE574F50020A41D /* BiggerServerAPITools.m in Sources */,
 				630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */,
 				6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */,
+				430364161CE71C5A008B2385 /* HHAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +592,7 @@
 		};
 		6331C8D01CD6207300F1C54B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6D70E34D47EE2E1BA259AF /* Pods-Bigger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -519,6 +609,7 @@
 		};
 		6331C8D11CD6207300F1C54B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C7EA8CBE649F659E7CF7CC /* Pods-Bigger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
