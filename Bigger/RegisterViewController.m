@@ -1,20 +1,20 @@
 //
-//  RegisterController.m
+//  RegisterViewController.m
 //  Bigger
 //
 //  Created by Huang on 16/5/11.
 //  Copyright © 2016年 Huang. All rights reserved.
 //
 
-#import "RegisterController.h"
+#import "RegisterViewController.h"
 
-@interface RegisterController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation RegisterController
+@implementation RegisterViewController
 
-@synthesize PhoneNumber,RemindMessage,MessageSend,IdentifyCode;
+@synthesize phonenumberTextField,remindmessageLable,messagesendButton,identifycodeTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +36,7 @@
 }
 */
 
-- (IBAction)Check:(id)sender {
+- (IBAction)messagesendButtonDidPress:(id)sender {
   //  RemindMessage.text=@"验证吗已发送至"+
     /**
      *  @from                    v1.1.1
@@ -48,7 +48,7 @@
      *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
      *  @param result            请求结果回调(Results of the request)
      */
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:PhoneNumber.text zone:@"86" customIdentifier:nil result:^(NSError *error){
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phonenumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error){
         if (!error)
             NSLog(@"获取验证码成功");
         else
@@ -56,8 +56,8 @@
         }];
 }
 
-- (IBAction)Next:(id)sender {
-    [SMSSDK commitVerificationCode:IdentifyCode.text phoneNumber:PhoneNumber.text zone:@"86" result:^(NSError *error) {
+- (IBAction)nextstepButtonDidPress:(id)sender {
+    [SMSSDK commitVerificationCode:identifycodeTextField.text phoneNumber:phonenumberTextField.text zone:@"86" result:^(NSError *error) {
         
         if (!error) {
             NSLog(@"验证成功");

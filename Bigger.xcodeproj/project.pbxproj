@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		630C75F01CE6BB1A005566F8 /* MainLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLogin.m */; };
-		630F9C521CE24D0300CD928F /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterController.m */; };
+		630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */; };
+		630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */; };
+		630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterViewController.m */; };
 		630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */; };
 		630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA4701CE4CDAF0020A41D /* SMS_SDK.framework */; };
 		630FA4781CE4CED40020A41D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA4731CE4CED40020A41D /* JavaScriptCore.framework */; };
@@ -44,10 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		630C75EE1CE6BB1A005566F8 /* MainLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLogin.h; sourceTree = "<group>"; };
-		630C75EF1CE6BB1A005566F8 /* MainLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLogin.m; sourceTree = "<group>"; };
-		630F9C501CE24D0300CD928F /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
-		630F9C511CE24D0300CD928F /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
+		630C75EE1CE6BB1A005566F8 /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
+		630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
+		630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
+		630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSuccessViewController.m; sourceTree = "<group>"; };
+		630F9C501CE24D0300CD928F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		630F9C511CE24D0300CD928F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		630FA4701CE4CDAF0020A41D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		630FA4731CE4CED40020A41D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/PrivateFrameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -211,10 +214,12 @@
 		6347AEC61CDF25360049BF5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				630C75EE1CE6BB1A005566F8 /* MainLogin.h */,
-				630C75EF1CE6BB1A005566F8 /* MainLogin.m */,
-				630F9C501CE24D0300CD928F /* RegisterController.h */,
-				630F9C511CE24D0300CD928F /* RegisterController.m */,
+				630C75EE1CE6BB1A005566F8 /* MainLoginViewController.h */,
+				630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */,
+				630F9C501CE24D0300CD928F /* RegisterViewController.h */,
+				630F9C511CE24D0300CD928F /* RegisterViewController.m */,
+				630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */,
+				630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,9 +362,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6331C8A71CD6207300F1C54B /* main.m in Sources */,
-				630C75F01CE6BB1A005566F8 /* MainLogin.m in Sources */,
+				630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */,
+				630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */,
 				630FA4811CE574F50020A41D /* BiggerServerAPITools.m in Sources */,
-				630F9C521CE24D0300CD928F /* RegisterController.m in Sources */,
+				630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */,
 				6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

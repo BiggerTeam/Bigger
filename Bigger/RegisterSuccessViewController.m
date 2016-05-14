@@ -1,25 +1,22 @@
 //
-//  MainLogin.m
+//  RegisterSuccessViewController.m
 //  Bigger
 //
-//  Created by Huang on 16/5/8.
+//  Created by Huang on 16/5/14.
 //  Copyright © 2016年 Huang. All rights reserved.
 //
 
-#import "MainLogin.h"
+#import "RegisterSuccessViewController.h"
 
-@interface MainLogin ()
+@interface RegisterSuccessViewController ()
 
 @end
 
-@implementation MainLogin
-
-//@synthesize LogoImage,AccountTextField,PasswordTextField,Login,ForgetPassword,Register,Browse,registercontroller
-;
+@implementation RegisterSuccessViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +34,6 @@
 }
 */
 
-
-
+- (IBAction)nextstepButtonDidPress:(id)sender {
+}
 @end

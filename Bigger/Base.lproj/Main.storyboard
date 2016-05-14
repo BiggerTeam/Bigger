@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Main Login-->
+        <!--Main Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainLogin" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,14 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fPo-wZ-Gdk">
-                                <rect key="frame" x="180" y="52" width="240" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mE3-JY-HdN">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Qv-ba-8DH">
                                 <rect key="frame" x="195" y="350" width="211" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -38,17 +30,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnp-1D-f1l">
-                                <rect key="frame" x="195" y="497" width="211" height="30"/>
-                                <state key="normal" title="登录"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-Lz-yby">
                                 <rect key="frame" x="154" y="541" width="60" height="30"/>
                                 <state key="normal" title="忘记密码"/>
+                                <connections>
+                                    <action selector="forgetpasswordButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yh-Yt-QZ6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1G-VK-Xo8">
                                 <rect key="frame" x="360" y="541" width="60" height="30"/>
                                 <state key="normal" title="随便看看"/>
+                                <connections>
+                                    <action selector="browseButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHr-sZ-2WV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-I5-LxP">
                                 <rect key="frame" x="195" y="428" width="211" height="30"/>
@@ -59,7 +53,18 @@
                                 <rect key="frame" x="285" y="541" width="30" height="30"/>
                                 <state key="normal" title="注册"/>
                                 <connections>
-                                    <segue destination="6Pu-m7-Vb3" kind="show" id="hxS-ig-YEY"/>
+                                    <action selector="registerButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvQ-Yb-t0a"/>
+                                    <segue destination="6Pu-m7-Vb3" kind="show" id="dJd-1R-dhl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-3P-7gz">
+                                <rect key="frame" x="180" y="45" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnp-1D-f1l">
+                                <rect key="frame" x="195" y="497" width="211" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56b-Xt-LCg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,17 +91,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Login" destination="Jnp-1D-f1l" id="co6-9J-0CM"/>
+                        <outlet property="logoImageView" destination="aWy-3P-7gz" id="udT-O6-7Cn"/>
+                        <outlet property="passwordTextField" destination="vc1-I5-LxP" id="vZl-5V-A6H"/>
+                        <outlet property="phonenumberTextField" destination="5Qv-ba-8DH" id="9B2-2d-toW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288" y="389"/>
+            <point key="canvasLocation" x="-340" y="389"/>
         </scene>
-        <!--Register Controller-->
+        <!--Register View Controller-->
         <scene sceneID="DjZ-He-TKN">
             <objects>
-                <viewController id="6Pu-m7-Vb3" customClass="RegisterController" sceneMemberID="viewController">
+                <viewController id="6Pu-m7-Vb3" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vaV-mt-ent"/>
                         <viewControllerLayoutGuide type="bottom" id="2f7-yV-BIe"/>
@@ -140,14 +147,14 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Check:" destination="6Pu-m7-Vb3" eventType="touchDown" id="t8M-PI-LDd"/>
+                                    <action selector="messagesendButtonDidPress:" destination="6Pu-m7-Vb3" eventType="touchUpInside" id="k2m-Je-spD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQe-D3-73w">
                                 <rect key="frame" x="226" y="389" width="148" height="43"/>
                                 <state key="normal" title="下一步"/>
                                 <connections>
-                                    <action selector="Next:" destination="6Pu-m7-Vb3" eventType="touchDown" id="Dlx-f3-aZW"/>
+                                    <action selector="nextstepButtonDidPress:" destination="6Pu-m7-Vb3" eventType="touchUpInside" id="2jI-Oq-aae"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,20 +181,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IdentifyCode" destination="fo5-hR-H1B" id="30H-KT-sVo"/>
-                        <outlet property="MessageSend" destination="weg-n4-BDY" id="MxQ-J3-qw1"/>
-                        <outlet property="PhoneNumber" destination="dnF-Va-CJR" id="qji-qq-XTy"/>
-                        <outlet property="RemindMessage" destination="xyv-Ii-HYY" id="rDd-NP-n1e"/>
+                        <outlet property="identifycodeTextField" destination="fo5-hR-H1B" id="kED-ro-7EK"/>
+                        <outlet property="messagesendButton" destination="weg-n4-BDY" id="EAo-Aw-MAg"/>
+                        <outlet property="phonenumberTextField" destination="dnF-Va-CJR" id="qif-gW-bkC"/>
+                        <outlet property="remindmessageLable" destination="xyv-Ii-HYY" id="pGg-w7-soI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44C-aV-OxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="389"/>
         </scene>
-        <!--Register Success Controller View Controller-->
+        <!--Register Success View Controller-->
         <scene sceneID="Dr2-4w-BXd">
             <objects>
-                <viewController id="ruW-oZ-7v0" customClass="RegisterSuccessControllerViewController" sceneMemberID="viewController">
+                <viewController id="ruW-oZ-7v0" customClass="RegisterSuccessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TWg-kD-UPC"/>
                         <viewControllerLayoutGuide type="bottom" id="5ed-a8-eGW"/>
@@ -242,12 +249,20 @@
                                     <segue destination="6Pu-m7-Vb3" kind="show" id="J9i-jq-hrx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-4w-8Lo">
+                                <rect key="frame" x="212" y="413" width="176" height="31"/>
+                                <state key="normal" title="下一步"/>
+                                <connections>
+                                    <action selector="nextstepButtonDidPress:" destination="ruW-oZ-7v0" eventType="touchUpInside" id="6TM-UQ-1kJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cvt-d5-YHs" firstAttribute="leading" secondItem="vIP-Dc-MQI" secondAttribute="leadingMargin" constant="48" id="1IU-Uy-LCF"/>
                             <constraint firstItem="RLz-Mg-8GC" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="0.15" id="1aG-5L-GNO"/>
                             <constraint firstItem="3vm-iK-Lzi" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="0.8" id="7jw-eB-Qa6"/>
+                            <constraint firstItem="lpy-4w-8Lo" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" id="8HT-Vw-bkC"/>
                             <constraint firstItem="3vm-iK-Lzi" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" id="AbJ-D7-D8F"/>
                             <constraint firstItem="dJL-eE-qcB" firstAttribute="leading" secondItem="vIP-Dc-MQI" secondAttribute="leadingMargin" constant="48" id="BKE-zG-sUy"/>
                             <constraint firstItem="dJL-eE-qcB" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="0.8" id="CV8-JF-3iF"/>
@@ -258,17 +273,25 @@
                             <constraint firstItem="wLN-XL-rpu" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="1.2" id="QqG-RX-EbE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3vm-iK-Lzi" secondAttribute="trailing" constant="44" id="Td8-0J-hgh"/>
                             <constraint firstItem="nkx-Bq-MVl" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" id="VVT-6N-vxr"/>
+                            <constraint firstItem="lpy-4w-8Lo" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="1.5" id="Vs7-4g-bTm"/>
                             <constraint firstItem="iw4-7W-1wT" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="0.15" id="WOz-y9-RRx"/>
                             <constraint firstItem="wLN-XL-rpu" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" id="g2f-qL-jRn"/>
                             <constraint firstItem="3vm-iK-Lzi" firstAttribute="leading" secondItem="vIP-Dc-MQI" secondAttribute="leadingMargin" constant="44" id="gWK-eF-NZH"/>
                             <constraint firstItem="vhq-ld-2Eq" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" id="gaX-NO-EZc"/>
                             <constraint firstItem="vhq-ld-2Eq" firstAttribute="leading" secondItem="vIP-Dc-MQI" secondAttribute="leadingMargin" constant="44" id="hfQ-LN-aBA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lpy-4w-8Lo" secondAttribute="trailing" constant="66" id="j0f-iA-GWn"/>
+                            <constraint firstItem="lpy-4w-8Lo" firstAttribute="leading" secondItem="vIP-Dc-MQI" secondAttribute="leadingMargin" constant="66" id="jT0-HE-NDx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wLN-XL-rpu" secondAttribute="trailing" constant="44" id="rfN-Wz-Kf4"/>
                             <constraint firstItem="iw4-7W-1wT" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" multiplier="1.8" id="sjd-c6-twi"/>
                             <constraint firstItem="Cvt-d5-YHs" firstAttribute="centerY" secondItem="vIP-Dc-MQI" secondAttribute="centerY" multiplier="1.2" id="ubd-9r-TZs"/>
                             <constraint firstItem="RLz-Mg-8GC" firstAttribute="centerX" secondItem="vIP-Dc-MQI" secondAttribute="centerX" id="yjD-ZD-j9G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="3vm-iK-Lzi" id="kAZ-Ab-wyU"/>
+                        <outlet property="passwordTextField" destination="vhq-ld-2Eq" id="wDS-j0-lVG"/>
+                        <outlet property="repeatpasswordTextField" destination="wLN-XL-rpu" id="9YK-z6-h9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GZ-ye-dev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J9i-jq-hrx"/>
+        <segue reference="dJd-1R-dhl"/>
     </inferredMetricsTieBreakers>
 </document>
