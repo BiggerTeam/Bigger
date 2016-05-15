@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HHAlertView.h"
+#import "AFNetworking.h"
 
+#define LOGINSUCCESS 200
+#define WRONGPASSWORD 500
+#define ILLEGALACCOUNT 100
 
 @interface MainLoginViewController : UIViewController
 
