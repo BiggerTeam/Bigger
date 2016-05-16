@@ -96,6 +96,7 @@
 }
 
 - (IBAction)forgetpasswordButtonDidPress:(id)sender {
+    [self performSegueWithIdentifier:@"goToForgetPasswordViewController" sender:self];
 }
 
 - (IBAction)registerButtonDidPress:(id)sender {

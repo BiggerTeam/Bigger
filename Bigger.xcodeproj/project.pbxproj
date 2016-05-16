@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		430364161CE71C5A008B2385 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 430364151CE71C5A008B2385 /* HHAlertView.m */; };
 		430364191CE72AD2008B2385 /* LoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 430364181CE72AD2008B2385 /* LoginAPI.m */; };
+		43094BD61CE98F3900CBB5D5 /* SuccessResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43094BD51CE98F3900CBB5D5 /* SuccessResetViewController.m */; };
+		434007691CE86E8500BFEB86 /* forgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434007681CE86E8500BFEB86 /* forgetPasswordViewController.m */; };
 		630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */; };
 		630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */; };
 		630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterViewController.m */; };
@@ -53,6 +55,10 @@
 		430364151CE71C5A008B2385 /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
 		430364171CE72AD2008B2385 /* LoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAPI.h; sourceTree = "<group>"; };
 		430364181CE72AD2008B2385 /* LoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAPI.m; sourceTree = "<group>"; };
+		43094BD41CE98F3900CBB5D5 /* SuccessResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessResetViewController.h; sourceTree = "<group>"; };
+		43094BD51CE98F3900CBB5D5 /* SuccessResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessResetViewController.m; sourceTree = "<group>"; };
+		434007671CE86E8500BFEB86 /* forgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgetPasswordViewController.h; sourceTree = "<group>"; };
+		434007681CE86E8500BFEB86 /* forgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgetPasswordViewController.m; sourceTree = "<group>"; };
 		630C75EE1CE6BB1A005566F8 /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
 		630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
@@ -253,6 +259,10 @@
 				630F9C511CE24D0300CD928F /* RegisterViewController.m */,
 				630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */,
 				630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */,
+				434007671CE86E8500BFEB86 /* forgetPasswordViewController.h */,
+				434007681CE86E8500BFEB86 /* forgetPasswordViewController.m */,
+				43094BD41CE98F3900CBB5D5 /* SuccessResetViewController.h */,
+				43094BD51CE98F3900CBB5D5 /* SuccessResetViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -458,9 +468,11 @@
 				6331C8A71CD6207300F1C54B /* main.m in Sources */,
 				630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */,
 				630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */,
+				43094BD61CE98F3900CBB5D5 /* SuccessResetViewController.m in Sources */,
 				630FA4811CE574F50020A41D /* BiggerServerAPITools.m in Sources */,
 				630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */,
 				6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */,
+				434007691CE86E8500BFEB86 /* forgetPasswordViewController.m in Sources */,
 				430364161CE71C5A008B2385 /* HHAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
