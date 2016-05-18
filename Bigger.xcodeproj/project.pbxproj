@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47BA87C187BDF2C9BB68BF48 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */; };
 		630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */; };
 		630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */; };
+		630C75F91CE9AE4C005566F8 /* LabelChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F81CE9AE4C005566F8 /* LabelChooseViewController.m */; };
 		630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F9C511CE24D0300CD928F /* RegisterViewController.m */; };
 		630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */; };
 		630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630FA4701CE4CDAF0020A41D /* SMS_SDK.framework */; };
@@ -25,6 +27,7 @@
 		6331C8C01CD6207300F1C54B /* BiggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8BF1CD6207300F1C54B /* BiggerTests.m */; };
 		6331C8CB1CD6207300F1C54B /* BiggerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6331C8CA1CD6207300F1C54B /* BiggerUITests.m */; };
 		6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347AEC91CDF459E0049BF5F /* AppDelegate.m */; };
+		636CC9AE1CEC5A64009FA51A /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636CC9AD1CEC5A64009FA51A /* MZTimerLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
 		630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSuccessViewController.m; sourceTree = "<group>"; };
+		630C75F71CE9AE4C005566F8 /* LabelChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelChooseViewController.h; sourceTree = "<group>"; };
+		630C75F81CE9AE4C005566F8 /* LabelChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelChooseViewController.m; sourceTree = "<group>"; };
 		630F9C501CE24D0300CD928F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		630F9C511CE24D0300CD928F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		630FA46F1CE4CDAF0020A41D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -74,6 +79,11 @@
 		6331C8CC1CD6207300F1C54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6347AEC81CDF459E0049BF5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6347AEC91CDF459E0049BF5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		636CC9AC1CEC5A64009FA51A /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
+		636CC9AD1CEC5A64009FA51A /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
+		6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A993540DE3745D25DF154931 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E1823B229F32C969891283D3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 				630FA47C1CE4CED40020A41D /* MessageUI.framework in Frameworks */,
 				630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */,
 				630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */,
+				47BA87C187BDF2C9BB68BF48 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153E83F37272DFB68E8E3E1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		630FA46E1CE4CDAF0020A41D /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +139,7 @@
 		630FA47E1CE4CFAE0020A41D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				636CC9AB1CEC5A64009FA51A /* MZTimerLabel */,
 				630FA46E1CE4CDAF0020A41D /* SMS_SDK */,
 				630FA4731CE4CED40020A41D /* JavaScriptCore.framework */,
 				630FA4741CE4CED40020A41D /* libicucore.tbd */,
@@ -137,6 +157,8 @@
 				6331C8BE1CD6207300F1C54B /* BiggerTests */,
 				6331C8C91CD6207300F1C54B /* BiggerUITests */,
 				6331C8A31CD6207300F1C54B /* Products */,
+				9F816F1B493249944544F6B2 /* Pods */,
+				153E83F37272DFB68E8E3E1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +242,8 @@
 				630F9C511CE24D0300CD928F /* RegisterViewController.m */,
 				630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */,
 				630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */,
+				630C75F71CE9AE4C005566F8 /* LabelChooseViewController.h */,
+				630C75F81CE9AE4C005566F8 /* LabelChooseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -231,6 +255,24 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		636CC9AB1CEC5A64009FA51A /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				636CC9AC1CEC5A64009FA51A /* MZTimerLabel.h */,
+				636CC9AD1CEC5A64009FA51A /* MZTimerLabel.m */,
+			);
+			path = MZTimerLabel;
+			sourceTree = "<group>";
+		};
+		9F816F1B493249944544F6B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1823B229F32C969891283D3 /* Pods.debug.xcconfig */,
+				A993540DE3745D25DF154931 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6331C8CF1CD6207300F1C54B /* Build configuration list for PBXNativeTarget "Bigger" */;
 			buildPhases = (
+				0A4B88F535BD5AF39772BFE3 /* Check Pods Manifest.lock */,
 				6331C89E1CD6207300F1C54B /* Sources */,
 				6331C89F1CD6207300F1C54B /* Frameworks */,
 				6331C8A01CD6207300F1C54B /* Resources */,
+				6ABEBC193F6FA475BA8B761D /* Embed Pods Frameworks */,
+				04A7AD40BBC0247A4F025CAF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,17 +401,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04A7AD40BBC0247A4F025CAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A4B88F535BD5AF39772BFE3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6ABEBC193F6FA475BA8B761D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6331C89E1CD6207300F1C54B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6331C8A71CD6207300F1C54B /* main.m in Sources */,
+				636CC9AE1CEC5A64009FA51A /* MZTimerLabel.m in Sources */,
 				630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */,
 				630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */,
 				630FA4811CE574F50020A41D /* BiggerServerAPITools.m in Sources */,
 				630F9C521CE24D0300CD928F /* RegisterViewController.m in Sources */,
 				6347AECA1CDF459E0049BF5F /* AppDelegate.m in Sources */,
+				630C75F91CE9AE4C005566F8 /* LabelChooseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +598,7 @@
 		};
 		6331C8D01CD6207300F1C54B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1823B229F32C969891283D3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -519,6 +615,7 @@
 		};
 		6331C8D11CD6207300F1C54B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A993540DE3745D25DF154931 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -8,7 +8,10 @@
 
 #import "RegisterViewController.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<MZTimerLabelDelegate>{
+    UILabel *timer_show; //倒计时Label
+}
+
 
 @end
 
@@ -19,6 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    NSString *str = [NSString stringWithFormat:@"验证"];
+//    messagesendButton.titleLabel.text = str;
+    
+    /*设置验证按钮的初始状态*/
+    [messagesendButton setTitle:@"验证" forState:UIControlStateNormal];
+    messagesendButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +47,8 @@
 */
 
 - (IBAction)messagesendButtonDidPress:(id)sender {
+    
+
   //  RemindMessage.text=@"验证吗已发送至"+
     /**
      *  @from                    v1.1.1
@@ -49,29 +61,78 @@
      *  @param result            请求结果回调(Results of the request)
      */
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phonenumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error){
-        if (!error)
+        if (!error){
             NSLog(@"获取验证码成功");
-        else
-            NSLog(@"错误信息：%@",error);
+            [messagesendButton setTitle:@"短信发送中" forState:UIControlStateNormal];
+            messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
+            
+            [self timeCount];
+        }else
+        {NSLog(@"错误信息：%@",error);
+            
+            [messagesendButton setTitle:@"短信发送中" forState:UIControlStateNormal];
+            messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
+            
+        [self timeCount];
+        }
         }];
+
+//        _time = 10;//初始化倒计时时间
+//        [messagesendButton setTitle:[NSString stringWithFormat:@"%ld秒后重新发送",(long)_time] forState:UIControlStateNormal];
+//         messagesendButton.titleLabel.font = [UIFont systemFontOfSize:10];
+//    
+//        messagesendButton.enabled = NO;//按钮处于不可的点击状态
+//        //messagesendButton.titleLabel.backgroundColor =[UIColor lightGrayColor];//按钮变为灰色
+//        [NSTimer scheduledTimerWithTimeInterval:1.0
+//                                         target:self
+//                                       selector:@selector(countTime:)
+//                                       userInfo:nil
+//                                        repeats:(BOOL)_time];
+    
 }
+
 
 - (IBAction)nextstepButtonDidPress:(id)sender {
     [SMSSDK commitVerificationCode:identifycodeTextField.text phoneNumber:phonenumberTextField.text zone:@"86" result:^(NSError *error) {
-        
         if (!error) {
             NSLog(@"验证成功");
-            
         }
         else
         {
             NSLog(@"错误信息:%@",error);
         }
     }];
+    
 }
 ////触摸背景关闭键盘。
 //- (IBAction)viewAction:(id)sender {
 //    [Accountname resignFirstResponder];
 //}
 
+
+
+/**
+ *  倒计时
+ */
+- (void)timeCount{
+    [messagesendButton setTitle:nil forState:UIControlStateNormal];//把按钮原先的名字消掉
+    timer_show = [[UILabel alloc] initWithFrame:CGRectMake(326,226,248,30)];//UILabel设置成和UIButton一样的尺寸和位置
+    [messagesendButton addSubview:timer_show];//把timer_show添加到按钮上
+    
+    MZTimerLabel *timer_cutDown = [[MZTimerLabel alloc] initWithLabel:timer_show andTimerType:MZTimerLabelTypeTimer];//创建MZTimerLabel类的对象timer_cutDown
+    [timer_cutDown setCountDownTime:5];//倒计时时间5s
+    timer_cutDown.timeFormat = @"HH:mm:ss SS";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
+    timer_cutDown.timeLabel.textColor = [UIColor blackColor];//倒计时字体颜色
+    timer_cutDown.timeLabel.font = [UIFont systemFontOfSize:10];//倒计时字体大小
+    timer_cutDown.timeLabel.textAlignment = NSTextAlignmentCenter;//剧中
+    timer_cutDown.delegate = self;//设置代理，以便后面倒计时结束时调用代理
+    messagesendButton.enabled = NO;//按钮禁止点击
+    [timer_cutDown start];//开始计时
+}
+//倒计时结束后的代理方法
+- (void)timerLabel:(MZTimerLabel *)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime{
+    [messagesendButton setTitle:@"重新发送" forState:UIControlStateNormal];//倒计时结束后按钮名称改为"重新发送"
+    [timer_show removeFromSuperview];//移除倒计时模块
+    messagesendButton.enabled = YES;//按钮可以点击
+}
 @end

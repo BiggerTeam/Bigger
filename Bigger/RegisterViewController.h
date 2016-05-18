@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <SMS_SDK/SMSSDK.h>
+#import "MZTimerLabel.h"
 
 @interface RegisterViewController : UIViewController
-
 
 @property (weak, nonatomic) IBOutlet UITextField *phonenumberTextField;
 @property (weak, nonatomic) IBOutlet UILabel *remindmessageLabel; //提醒用户验证吗已发送至xxx-xxxx-xxxx
@@ -20,6 +20,7 @@
 - (IBAction)messagesendButtonDidPress:(id)sender;//发送验证短信
 - (IBAction)nextstepButtonDidPress:(id)sender;//提交验证码
 
+//@property (nonatomic,assign) NSInteger time; //设置发送验证码60倒计时
 
 
 
