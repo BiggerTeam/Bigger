@@ -28,6 +28,10 @@
     /*设置验证按钮的初始状态*/
     [messagesendButton setTitle:@"验证" forState:UIControlStateNormal];
     messagesendButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    // messagesendButton.backgroundColor = [UIColor lightGrayColor];
+
+    /*设置短信发送提示信息初始状态*/
+    remindmessageLabel.text = [NSString stringWithFormat:@""];
     
 }
 
@@ -48,8 +52,16 @@
 
 - (IBAction)messagesendButtonDidPress:(id)sender {
     
-
-  //  RemindMessage.text=@"验证吗已发送至"+
+    /*号码为空则弹出提示框*/
+    if([phonenumberTextField.text isEqualToString:@""]){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号码不能为空" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
+    
+    [messagesendButton setTitle:@"短信发送中" forState:UIControlStateNormal];
+    messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
     /**
      *  @from                    v1.1.1
      *  @brief                   获取验证码(Get verification code)
@@ -62,20 +74,19 @@
      */
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phonenumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error){
         if (!error){
+            /*发送成功之后提醒用户“已发送”并进入倒计时*/
             NSLog(@"获取验证码成功");
-            [messagesendButton setTitle:@"短信发送中" forState:UIControlStateNormal];
-            messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
-            
+            remindmessageLabel.text = [NSString stringWithFormat:@"验证码已发送"];
+            //remindmessageLabel.text = [NSString stringWithFormat:@"验证码已发送至%@",phonenumberTextField.text];
+            remindmessageLabel.textColor = [UIColor lightGrayColor];
+
             [self timeCount];
         }else
         {NSLog(@"错误信息：%@",error);
-            
-            [messagesendButton setTitle:@"短信发送中" forState:UIControlStateNormal];
-            messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
-            
-        [self timeCount];
+            [messagesendButton setTitle:@"重新发送" forState:UIControlStateNormal];
         }
         }];
+    }
 
 //        _time = 10;//初始化倒计时时间
 //        [messagesendButton setTitle:[NSString stringWithFormat:@"%ld秒后重新发送",(long)_time] forState:UIControlStateNormal];
@@ -116,12 +127,12 @@
  */
 - (void)timeCount{
     [messagesendButton setTitle:nil forState:UIControlStateNormal];//把按钮原先的名字消掉
-    timer_show = [[UILabel alloc] initWithFrame:CGRectMake(326,226,248,30)];//UILabel设置成和UIButton一样的尺寸和位置
+    timer_show = [[UILabel alloc] initWithFrame:CGRectMake(0,0,93,30)];//UILabel设置成和UIButton一样的尺寸和位置
     [messagesendButton addSubview:timer_show];//把timer_show添加到按钮上
     
     MZTimerLabel *timer_cutDown = [[MZTimerLabel alloc] initWithLabel:timer_show andTimerType:MZTimerLabelTypeTimer];//创建MZTimerLabel类的对象timer_cutDown
-    [timer_cutDown setCountDownTime:5];//倒计时时间5s
-    timer_cutDown.timeFormat = @"HH:mm:ss SS";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
+    [timer_cutDown setCountDownTime:60];//倒计时时间60s
+    timer_cutDown.timeFormat = @"ss秒后重新发送验证码";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
     timer_cutDown.timeLabel.textColor = [UIColor blackColor];//倒计时字体颜色
     timer_cutDown.timeLabel.font = [UIFont systemFontOfSize:10];//倒计时字体大小
     timer_cutDown.timeLabel.textAlignment = NSTextAlignmentCenter;//剧中
