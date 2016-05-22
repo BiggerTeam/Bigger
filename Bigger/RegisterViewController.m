@@ -25,12 +25,12 @@
 //    NSString *str = [NSString stringWithFormat:@"验证"];
 //    messagesendButton.titleLabel.text = str;
     
-    /*设置验证按钮的初始状态*/
-    [messagesendButton setTitle:@"验证" forState:UIControlStateNormal];
-    messagesendButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    //设置验证按钮的初始状态
+    [messagesendButton setTitle:@"发送验证码" forState:UIControlStateNormal];
+    messagesendButton.titleLabel.font = [UIFont systemFontOfSize:13.5];
     // messagesendButton.backgroundColor = [UIColor lightGrayColor];
 
-    /*设置短信发送提示信息初始状态*/
+    //设置短信发送提示信息初始状态
     remindmessageLabel.text = [NSString stringWithFormat:@""];
     
 }
@@ -50,12 +50,15 @@
 }
 */
 
+/**
+ * “发送验证码”按钮点击动作
+ */
 - (IBAction)messagesendButtonDidPress:(id)sender {
     
-    /*号码为空则弹出提示框*/
+    //号码为空则弹出提示框
     if([phonenumberTextField.text isEqualToString:@""]){
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号码不能为空" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"手机号码不能为空" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:cancel];
         [self presentViewController:alert animated:YES completion:nil];
     }else{
@@ -74,7 +77,7 @@
      */
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phonenumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error){
         if (!error){
-            /*发送成功之后提醒用户“已发送”并进入倒计时*/
+            //发送成功之后提醒用户“已发送”并进入倒计时
             NSLog(@"获取验证码成功");
             remindmessageLabel.text = [NSString stringWithFormat:@"验证码已发送"];
             //remindmessageLabel.text = [NSString stringWithFormat:@"验证码已发送至%@",phonenumberTextField.text];
@@ -84,6 +87,12 @@
         }else
         {NSLog(@"错误信息：%@",error);
             [messagesendButton setTitle:@"重新发送" forState:UIControlStateNormal];
+            
+            //发送失败出现提示
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"验证码发送失败" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         }];
     }
@@ -102,18 +111,34 @@
     
 }
 
-
+/**
+ * “下一步”按钮点击动作
+ */
 - (IBAction)nextstepButtonDidPress:(id)sender {
+    if ([identifycodeTextField.text isEqualToString:@""]) {
+        //验证码为空出现提示
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"验证码不能为空" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
     [SMSSDK commitVerificationCode:identifycodeTextField.text phoneNumber:phonenumberTextField.text zone:@"86" result:^(NSError *error) {
         if (!error) {
             NSLog(@"验证成功");
+            //跳转到二级注册界面
+            [self performSegueWithIdentifier:@"gotoRegisterSuccessViewController" sender:self];
         }
         else
         {
             NSLog(@"错误信息:%@",error);
+            //验证码错误出现提示
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"验证码错误" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }];
-    
+    }
 }
 ////触摸背景关闭键盘。
 //- (IBAction)viewAction:(id)sender {
@@ -132,8 +157,8 @@
     
     MZTimerLabel *timer_cutDown = [[MZTimerLabel alloc] initWithLabel:timer_show andTimerType:MZTimerLabelTypeTimer];//创建MZTimerLabel类的对象timer_cutDown
     [timer_cutDown setCountDownTime:60];//倒计时时间60s
-    timer_cutDown.timeFormat = @"ss秒后重新发送验证码";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
-    timer_cutDown.timeLabel.textColor = [UIColor blackColor];//倒计时字体颜色
+    timer_cutDown.timeFormat = @"重新发送(ss)";//倒计时格式,也可以是@"HH:mm:ss SS"，时，分，秒，毫秒；想用哪个就写哪个
+    timer_cutDown.timeLabel.textColor = [UIColor lightGrayColor];//倒计时字体颜色
     timer_cutDown.timeLabel.font = [UIFont systemFontOfSize:10];//倒计时字体大小
     timer_cutDown.timeLabel.textAlignment = NSTextAlignmentCenter;//剧中
     timer_cutDown.delegate = self;//设置代理，以便后面倒计时结束时调用代理
@@ -143,7 +168,21 @@
 //倒计时结束后的代理方法
 - (void)timerLabel:(MZTimerLabel *)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime{
     [messagesendButton setTitle:@"重新发送" forState:UIControlStateNormal];//倒计时结束后按钮名称改为"重新发送"
+    remindmessageLabel.text = [NSString stringWithFormat:@""];//倒计时结束后移除提示文字
+
     [timer_show removeFromSuperview];//移除倒计时模块
     messagesendButton.enabled = YES;//按钮可以点击
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // segue.identifier：获取连线的ID
+    if ([segue.identifier isEqualToString:@"gotoRegisterSuccessViewController"]) {
+        // segue.destinationViewController：获取连线时所指的界面（VC）
+        RegisterSuccessViewController *receive = segue.destinationViewController;
+        receive.phonenumberTextField = phonenumberTextField;
+        // 这里不需要指定跳转了，因为在按扭的事件里已经有跳转的代码
+        //		[self.navigationController pushViewController:receive animated:YES];
+    }
 }
 @end

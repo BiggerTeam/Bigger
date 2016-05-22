@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SMS_SDK/SMSSDK.h>
 #import "MZTimerLabel.h"
+#import "RegisterSuccessViewController.h"
 
 
 @interface RegisterViewController : UIViewController
@@ -21,7 +22,6 @@
 - (IBAction)messagesendButtonDidPress:(id)sender;//发送验证短信
 - (IBAction)nextstepButtonDidPress:(id)sender;//提交验证码
 
-//@property (nonatomic,assign) NSInteger time; //设置发送验证码60倒计时
 
 
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47BA87C187BDF2C9BB68BF48 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */; };
+		42483F55BB0FB9E44FB626F0 /* libPods-Bigger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F273AB3330640F88770EEF /* libPods-Bigger.a */; };
 		630C75F01CE6BB1A005566F8 /* MainLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */; };
 		630C75F61CE70606005566F8 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F51CE70606005566F8 /* RegisterSuccessViewController.m */; };
 		630C75F91CE9AE4C005566F8 /* LabelChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630C75F81CE9AE4C005566F8 /* LabelChooseViewController.m */; };
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3ED31FF41E10A681EA1601CA /* Pods-Bigger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bigger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bigger/Pods-Bigger.release.xcconfig"; sourceTree = "<group>"; };
 		630C75EE1CE6BB1A005566F8 /* MainLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoginViewController.h; sourceTree = "<group>"; };
 		630C75EF1CE6BB1A005566F8 /* MainLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLoginViewController.m; sourceTree = "<group>"; };
 		630C75F41CE70606005566F8 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
@@ -81,9 +82,10 @@
 		6347AEC91CDF459E0049BF5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		636CC9AC1CEC5A64009FA51A /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
 		636CC9AD1CEC5A64009FA51A /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
-		6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F273AB3330640F88770EEF /* libPods-Bigger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bigger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A993540DE3745D25DF154931 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E1823B229F32C969891283D3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F1638DBE490CB6B57DC4F9ED /* Pods-Bigger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bigger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bigger/Pods-Bigger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,7 @@
 				630FA47C1CE4CED40020A41D /* MessageUI.framework in Frameworks */,
 				630FA4711CE4CDAF0020A41D /* MOBFoundation.framework in Frameworks */,
 				630FA4721CE4CDAF0020A41D /* SMS_SDK.framework in Frameworks */,
-				47BA87C187BDF2C9BB68BF48 /* libPods.a in Frameworks */,
+				42483F55BB0FB9E44FB626F0 /* libPods-Bigger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +124,7 @@
 		153E83F37272DFB68E8E3E1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EEFF36B9CAFAF8F0D32ED37 /* libPods.a */,
+				71F273AB3330640F88770EEF /* libPods-Bigger.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,6 +271,8 @@
 			children = (
 				E1823B229F32C969891283D3 /* Pods.debug.xcconfig */,
 				A993540DE3745D25DF154931 /* Pods.release.xcconfig */,
+				F1638DBE490CB6B57DC4F9ED /* Pods-Bigger.debug.xcconfig */,
+				3ED31FF41E10A681EA1601CA /* Pods-Bigger.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -414,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bigger/Pods-Bigger-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0A4B88F535BD5AF39772BFE3 /* Check Pods Manifest.lock */ = {
@@ -444,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bigger/Pods-Bigger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -598,7 +602,7 @@
 		};
 		6331C8D01CD6207300F1C54B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1823B229F32C969891283D3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F1638DBE490CB6B57DC4F9ED /* Pods-Bigger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -615,7 +619,7 @@
 		};
 		6331C8D11CD6207300F1C54B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A993540DE3745D25DF154931 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 3ED31FF41E10A681EA1601CA /* Pods-Bigger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

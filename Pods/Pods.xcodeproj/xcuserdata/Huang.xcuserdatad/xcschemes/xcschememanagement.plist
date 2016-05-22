@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-Bigger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,7 +27,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<key>3C137FE848FCA02DC65BFB0D9CE7AA14</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,11 +43,6 @@
 			<true/>
 		</dict>
 		<key>951BAA5FA8501628A76E1461A7BA9AA9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
