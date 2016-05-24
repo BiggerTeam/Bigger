@@ -174,7 +174,9 @@
     messagesendButton.enabled = YES;//按钮可以点击
 }
 
-
+/**
+ *跳转二级页面时将电话号码传过去
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // segue.identifier：获取连线的ID
     if ([segue.identifier isEqualToString:@"gotoRegisterSuccessViewController"]) {

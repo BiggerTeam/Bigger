@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Pu-m7-Vb3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ruW-oZ-7v0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -172,7 +172,7 @@
                                     <constraint firstAttribute="width" constant="93" id="DNC-zq-2B7"/>
                                     <constraint firstAttribute="width" constant="93" id="lwz-a0-4lC"/>
                                 </constraints>
-                                <state key="normal" title="gg">
+                                <state key="normal" title="发送验证码">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -273,12 +273,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-Bq-MVl">
-                                <rect key="frame" x="53" y="290" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvt-d5-YHs">
                                 <rect key="frame" x="53" y="350" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -300,6 +294,12 @@
                                     <action selector="nextstepButtonDidPress:" destination="ruW-oZ-7v0" eventType="touchUpInside" id="6TM-UQ-1kJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-Bq-MVl">
+                                <rect key="frame" x="53" y="290" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -335,11 +335,12 @@
                         <outlet property="nameTextField" destination="3vm-iK-Lzi" id="kAZ-Ab-wyU"/>
                         <outlet property="passwordTextField" destination="vhq-ld-2Eq" id="wDS-j0-lVG"/>
                         <outlet property="repeatpasswordTextField" destination="wLN-XL-rpu" id="9YK-z6-h9M"/>
+                        <segue destination="Qah-jn-dGX" kind="show" identifier="gotoLabelChooseViewController" id="ZZf-kh-eiC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GZ-ye-dev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="375"/>
+            <point key="canvasLocation" x="1082" y="363"/>
         </scene>
         <!--Label Choose View Controller-->
         <scene sceneID="GGk-ay-GQR">
@@ -425,11 +426,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7l-Su-Gd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="375"/>
+            <point key="canvasLocation" x="1754" y="353"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EEg-yj-ykw"/>
         <segue reference="J9i-jq-hrx"/>
+        <segue reference="Z8y-5I-2Jr"/>
     </inferredMetricsTieBreakers>
 </document>
