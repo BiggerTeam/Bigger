@@ -13,14 +13,13 @@
 @end
 
 @implementation RegisterSuccessViewController
-@synthesize nameTextField,passwordTextField,repeatpasswordTextField,nameTextField1,passwordTextField1,repeatpasswordTextField1,phonenumberTextField;
+@synthesize nameTextField,passwordTextField,repeatpasswordTextField,nameTextField1,passwordTextField1,repeatpasswordTextField1,phonenumber;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    phonenumberTextField = [[UITextField alloc]init];
-    phonenumberTextField.text = @"336";
+    //暫時的方法
+    phonenumber = [NSString stringWithFormat:@"128"];
     
     // Do any additional setup after loading the view.
     
@@ -61,14 +60,10 @@
 
 - (IBAction)nextstepButtonDidPress:(id)sender {
     if ([nameTextField1.text isEqualToString:@""]||[passwordTextField1.text isEqualToString:@""]) {
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        [SVProgressHUD showInfoWithStatus:@"用户名或密码不能为空"];
-        [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
+        [self showWarningMessage:@"用户名或密码不能为空"];
     }else
     if (![passwordTextField1.text isEqualToString:repeatpasswordTextField1.text]) {
-       [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        [SVProgressHUD showInfoWithStatus:@"密码不一致"];
-        [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
+        [self showWarningMessage:@"密码不一致"];
     }else{
         [self getRegisterResult];
     }
@@ -85,7 +80,7 @@
     mgr.securityPolicy = securitypolicy;
     
     //2.后台登录接口
-    NSURL *URL = [NSURL URLWithString:[BiggerServerAPITools RegisterUserphone:phonenumberTextField.text Password:passwordTextField1.text Username:nameTextField1.text]];
+    NSURL *URL = [NSURL URLWithString:[BiggerServerAPITools RegisterUserphone:phonenumber Password:passwordTextField1.text Username:nameTextField1.text]];
     
     //3.发送一个POST请求
     [mgr POST:[URL absoluteString] parameters:nil progress:^(NSProgress *uploadProgress) {
@@ -146,31 +141,45 @@
 /**
  *   passwordTextField1和repeatpassword的代理方法：获得焦点时提示用户名和密码是否合法
  */
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
     if ([passwordTextField1 isFirstResponder]) {
         //判断nameTextField1是否为空
         if ([nameTextField1.text isEqualToString:@""]) {
-            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-            [SVProgressHUD showInfoWithStatus:@"用户名不能为空"];
-           [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
+            [self showWarningMessage:@"用户名不能为空"];
+
     }else//判断passwordTextField1长度是否合法
         if (nameTextField1.text.length<6 ||nameTextField1.text.length>12) {
-            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-            [SVProgressHUD showInfoWithStatus:@"昵称为6-12个字母和数字组成"];
-            [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
-            
+            [self showWarningMessage:@"昵称为6-12个字母和数字组成"];
         }
     }
         //判断password是否为空
         if ([repeatpasswordTextField1 isFirstResponder]&&[passwordTextField1.text isEqualToString:@""]) {
-            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-            [SVProgressHUD showInfoWithStatus:@"密码不能为空"];
-            [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
+            [self showWarningMessage:@"密码不能为空"];
         }
     }
 
 //通过dismiss方法来隐藏SVProgressHUD提示
 - (IBAction)dismiss:(id)sender {
     [SVProgressHUD dismiss];
+}
+
+- (void)showWarningMessage:(NSString *)message{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showInfoWithStatus:message];
+    [self performSelector:@selector(dismiss:) withObject:nil afterDelay:1];
+}
+
+/**
+ * 跳转标签选择页面时将电话号码传过去，因为后台接口的需要
+ */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // segue.identifier：获取连线的ID
+    if ([segue.identifier isEqualToString:@"gotoLabelChooseViewController"]) {
+        // segue.destinationViewController：获取连线时所指的界面（VC）
+        LabelChooseViewController *receive = segue.destinationViewController;
+        receive.phonenumber = self.phonenumber;
+        // 这里不需要指定跳转了，因为在按扭的事件里已经有跳转的代码
+        //		[self.navigationController pushViewController:receive animated:YES];
+    }
 }
 @end

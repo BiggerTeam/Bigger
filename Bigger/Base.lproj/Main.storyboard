@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ruW-oZ-7v0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qah-jn-dGX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -354,74 +354,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-xy-RmT">
-                                <rect key="frame" x="280" y="28" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-xy-RmT">
+                                <rect key="frame" x="280" y="33" width="40" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择你喜欢的标签" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-AS-YAC">
+                                <rect key="frame" x="232" y="110" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-as-Smm" customClass="Label">
-                                <rect key="frame" x="542" y="24" width="30" height="30"/>
-                                <state key="normal" title="取消"/>
-                                <connections>
-                                    <segue destination="ruW-oZ-7v0" kind="presentation" id="Z8y-5I-2Jr"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择你喜欢的标签" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-AS-YAC">
-                                <rect key="frame" x="165" y="84" width="265" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCF-el-Mlj">
-                                <rect key="frame" x="180" y="125" width="240" height="2"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCF-el-Mlj">
+                                <rect key="frame" x="53" y="135" width="494" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="OCP-hU-Mjq"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwB-rU-Ti0">
-                                <rect key="frame" x="285" y="204" width="30" height="30"/>
-                                <state key="normal" title="2"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-as-Smm" customClass="Label">
+                                <rect key="frame" x="525" y="30" width="30" height="30"/>
+                                <state key="normal" title="取消"/>
+                                <connections>
+                                    <segue destination="ruW-oZ-7v0" kind="presentation" id="Z8y-5I-2Jr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOG-2j-y2f">
-                                <rect key="frame" x="101" y="204" width="30" height="30"/>
-                                <state key="normal" title="1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOG-2j-y2f">
+                                <rect key="frame" x="135" y="195" width="30" height="30"/>
+                                <state key="normal" title="运动"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="PQE-09-jqT"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-xc-O4p">
-                                <rect key="frame" x="455" y="204" width="30" height="30"/>
-                                <state key="normal" title="3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-xc-O4p">
+                                <rect key="frame" x="435" y="195" width="30" height="30"/>
+                                <state key="normal" title="生活"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="TNN-BB-3z6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViB-tb-rif">
-                                <rect key="frame" x="285" y="338" width="30" height="30"/>
-                                <state key="normal" title="5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E40-r8-yLL">
+                                <rect key="frame" x="135" y="285" width="30" height="30"/>
+                                <state key="normal" title="社会"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="OfW-Kh-nT1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E40-r8-yLL">
-                                <rect key="frame" x="101" y="338" width="30" height="30"/>
-                                <state key="normal" title="4"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViB-tb-rif">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="娱乐"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="FPk-jr-Iiy"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DZ-PA-cbb">
-                                <rect key="frame" x="455" y="338" width="30" height="30"/>
-                                <state key="normal" title="6"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DZ-PA-cbb">
+                                <rect key="frame" x="435" y="285" width="30" height="30"/>
+                                <state key="normal" title="科技"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="xPj-av-5Wz"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="添加推荐关注用户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-ab-IpX">
-                                <rect key="frame" x="197" y="501" width="201" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加推荐关注用户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-ab-IpX">
+                                <rect key="frame" x="240" y="411" width="120" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-uP-AtX">
-                                <rect key="frame" x="155" y="425" width="284" height="57"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-uP-AtX">
+                                <rect key="frame" x="260" y="372" width="80" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="完成注册"/>
+                                <connections>
+                                    <action selector="completeButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="PDo-9S-qcZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-T5-vM4">
-                                <rect key="frame" x="163" y="511" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-T5-vM4">
+                                <rect key="frame" x="125" y="405" width="51" height="30"/>
                                 <state key="normal" title="(=^x^=)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwB-rU-Ti0">
+                                <rect key="frame" x="285" y="195" width="30" height="30"/>
+                                <state key="normal" title="旅行"/>
+                                <connections>
+                                    <action selector="labelchooseButtonDidPress:" destination="Qah-jn-dGX" eventType="touchUpInside" id="Q6c-LZ-QQs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Xrb-ab-IpX" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="1.4" id="01R-GB-GkJ"/>
+                            <constraint firstItem="DGO-uP-AtX" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="0xr-ya-faQ"/>
+                            <constraint firstItem="d9h-xy-RmT" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="1vl-O1-5lO"/>
+                            <constraint firstItem="d9h-xy-RmT" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.15" id="5Ak-l6-82Y"/>
+                            <constraint firstItem="Xrb-ab-IpX" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="96i-p6-HsA"/>
+                            <constraint firstItem="ViB-tb-rif" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" id="FVh-ZK-pNX"/>
+                            <constraint firstItem="DGO-uP-AtX" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="1.3" id="GhB-ha-O9Z"/>
+                            <constraint firstItem="fCF-el-Mlj" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.45" id="IYS-aY-imZ"/>
+                            <constraint firstItem="eAg-as-Smm" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.15" id="LZw-bL-Esb"/>
+                            <constraint firstItem="cKQ-AS-YAC" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="NZp-b0-yeB"/>
+                            <constraint firstItem="ViB-tb-rif" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="ODG-Dk-n3M"/>
+                            <constraint firstItem="9I6-xc-O4p" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="1.5" id="REc-ip-qbI"/>
+                            <constraint firstItem="NXF-T5-vM4" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="1.4" id="Rvq-44-Cjd"/>
+                            <constraint firstItem="fCF-el-Mlj" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="THM-BZ-xF4"/>
+                            <constraint firstItem="E40-r8-yLL" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="0.5" id="YMU-Ds-08Y"/>
+                            <constraint firstItem="2DZ-PA-cbb" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="1.5" id="abA-z8-68b"/>
+                            <constraint firstItem="9I6-xc-O4p" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.7" id="ayE-DZ-Ghg"/>
+                            <constraint firstItem="CwB-rU-Ti0" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.7" id="bqz-pk-nM0"/>
+                            <constraint firstItem="cKQ-AS-YAC" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.4" id="cm0-kN-bIc"/>
+                            <constraint firstItem="fCF-el-Mlj" firstAttribute="leading" secondItem="mxd-l2-bHy" secondAttribute="leadingMargin" constant="33" id="eoE-oG-fYz"/>
+                            <constraint firstItem="NXF-T5-vM4" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="0.5" id="gIO-Ik-TOC"/>
+                            <constraint firstItem="E40-r8-yLL" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" id="i2h-nj-YvK"/>
+                            <constraint firstItem="bOG-2j-y2f" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="0.5" id="iRg-vO-4Nb"/>
+                            <constraint firstItem="2DZ-PA-cbb" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" id="sSW-9Q-VnK"/>
+                            <constraint firstItem="CwB-rU-Ti0" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" id="wOr-sc-zVs"/>
+                            <constraint firstItem="bOG-2j-y2f" firstAttribute="centerY" secondItem="mxd-l2-bHy" secondAttribute="centerY" multiplier="0.7" id="wWA-4c-dcg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fCF-el-Mlj" secondAttribute="trailing" constant="33" id="wlx-EI-xSJ"/>
+                            <constraint firstItem="eAg-as-Smm" firstAttribute="centerX" secondItem="mxd-l2-bHy" secondAttribute="centerX" multiplier="1.8" id="zol-nB-GR9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7l-Su-Gd4" userLabel="First Responder" sceneMemberID="firstResponder"/>

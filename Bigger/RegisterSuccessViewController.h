@@ -10,11 +10,12 @@
 #import <AFNetworking.h>
 #import "BiggerServerAPITools.h"
 #import <SVProgressHUD.h>
+#import "LabelChooseViewController.h"
 
 
 @interface RegisterSuccessViewController : UIViewController<UITextFieldDelegate>
 //接收上一个界面的电话号码
-@property (strong, nonatomic) IBOutlet UITextField *phonenumberTextField;
+@property (strong, nonatomic) NSString *phonenumber;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;

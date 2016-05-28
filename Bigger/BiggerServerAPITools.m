@@ -44,4 +44,17 @@
     return urlpath;
 }
 
+/**
+ *   添加标签
+ */
++(NSString *)AddLabelUserphone:(NSString *)aUserphone Userlabel:(NSMutableString *)aUserlabel{
+    NSString *basepath = HOST;
+    NSMutableString *urlpath = [[NSMutableString alloc] initWithString:basepath];
+    [urlpath appendString:@"/Bigger/AddLable.action?userphone="];
+    [urlpath appendString:aUserphone];
+    [urlpath appendString:@"&userlable="];
+    [urlpath appendString:aUserlabel];
+    
+    return  urlpath;
+}
 @end

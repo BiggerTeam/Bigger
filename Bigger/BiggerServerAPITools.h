@@ -18,6 +18,10 @@
 #define LOGINSUCCESS 200
 #define WRONGPASSWORD 500
 #define ILLEGALACCOUNT 100
+//标签返回值
+#define ACCONUTNOTEXIST 100
+#define ADDSUCCESS 200
+
 
 @interface BiggerServerAPITools : NSObject
 
@@ -25,4 +29,7 @@
 +(NSString *)RegisterUserphone:(NSString *)aUserphone Password:(NSString *)aPassword Username:(NSString *)aUsername;
 
 +(NSString *)LoginUserphone:(NSString *)aUserphone Password:(NSString *)aPassword;
+
++(NSString *)AddLabelUserphone:(NSString *)aUserphone Userlabel:(NSMutableString *)aUserabel;
+
 @end

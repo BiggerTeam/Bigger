@@ -182,7 +182,7 @@
     if ([segue.identifier isEqualToString:@"gotoRegisterSuccessViewController"]) {
         // segue.destinationViewController：获取连线时所指的界面（VC）
         RegisterSuccessViewController *receive = segue.destinationViewController;
-        receive.phonenumberTextField = phonenumberTextField;
+        receive.phonenumber = self.phonenumberTextField.text;
         // 这里不需要指定跳转了，因为在按扭的事件里已经有跳转的代码
         //		[self.navigationController pushViewController:receive animated:YES];
     }
